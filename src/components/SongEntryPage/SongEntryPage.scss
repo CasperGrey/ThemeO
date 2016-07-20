@@ -8,26 +8,21 @@
   margin: 0 auto;
   padding: 0 0 40px;
   max-width: $max-content-width;
-  align-items: center;
-}
+  align-content: center;
 
-.card{
-  padding: 0 0 100px;
 }
 
 .cardStyle {
-  display: inline-block;
+  display: inline;
   margin: 24px;
-  margintop: 2px;
-  transitionDuration: 0.3s;
-  textAlign: centre;
+  margin-top: 2px;
+  transition-duration: 0.3s;
+  text-align: center;
 }
 
 
 .dropdownStyle {
-  customWidth: {
-    width: 200;
-  }
+    width: 200px;
 }
 
 .textStyle {
