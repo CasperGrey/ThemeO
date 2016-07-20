@@ -5,7 +5,7 @@ import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './SongEntryPage.scss';
 import RaisedButton from 'material-ui/RaisedButton';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardActions, CardTitle} from 'material-ui/Card';
 import Form from './../Form.js'
 import Text from './../Text.js'
 import DropDownMenu from 'material-ui/DropDownMenu';
@@ -38,13 +38,13 @@ class SongEntryPage extends Component {
           {this.props.path === '/' ? null : <h1>{this.props.title}</h1>}
           <div dangerouslySetInnerHTML={{ __html: this.props.content || '' }} />
 
-        <Card style={s.cardStyle}>
+        <Card className={s.cardStyle}>
           <CardTitle title="Please Enter Your Songs" subtitle="2016" />
           <Form>
             <DropDownMenu
               value={this.state.value}
               onChange={this.handleChange}
-              style={s.dropdownStyle.customWidth}
+              className={s.dropdownStyle}
               autoWidth={false}
             >
               <MenuItem value={1} primaryText="Theme" />
@@ -58,7 +58,7 @@ class SongEntryPage extends Component {
               apiKey="AIzaSyB7A5zHn2Bd7F6FktdkW4JFLtWTyD3jeq0"
               />
           <Text
-              style ={s.textStyle}
+              className ={s.textStyle}
               name="Youtube URL Entry"
               placeholder="Youtube URL"
               label="URLEntry"/>
